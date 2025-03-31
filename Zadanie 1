@@ -2,7 +2,7 @@ Zadanie 1: Iterator sekwencji Fibonacciego
 Cel: Implementacja własnego iteratora i zrozumienie jego działania.
 
 Treść:
-Zaimplementuj klasę FibonacciIterator, która będzie iteratorem generującym kolejne liczby Fibonacciego. Klasa powinna pozwalać na iterację przez n pierwszych elementów tej sekwencji.
+Zmień kod (zmień "x") i zaimplementuj klasę FibonacciIterator, która będzie iteratorem generującym kolejne liczby Fibonacciego. Klasa powinna pozwalać na iterację przez n pierwszych elementów tej sekwencji.
 
 Przykład użycia:
 
@@ -12,3 +12,23 @@ for num in fib:
 
 Oczekiwany wynik:
 0 1 1 2 3 5 8 13 21 34
+
+
+
+class FibonacciIterator:
+    def __init__(self, n):
+        self.n = n
+        self.x = x
+        self.x = x
+        self.count = x
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.count >= self.n:
+            raise StopIteration
+        xxxxxxxxxxxx
+        xxxxxxxxxxxx
+        xxxxxxxxxxxx
+        return xxx
