@@ -1,1 +1,14 @@
-Zadanie 2
+Zadanie 2: Generator liczb pierwszych do n-tej liczby
+
+Cel: Implementacja generatora liczb pierwszych z ograniczeniem ilości zwróconych wartości.
+
+Treść:
+Zaimplementuj generator prime_numbers(n), który zwróci dokładnie n pierwszych liczb pierwszych.
+
+Przykład użycia:
+
+for num in prime_numbers(10):
+    print(num, end=" ")
+
+Oczekiwany wynik:
+2 3 5 7 11 13 17 19 23 29
