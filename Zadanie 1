@@ -1,1 +1,14 @@
-Zadanie 1
+Zadanie 1: Iterator sekwencji Fibonacciego
+Cel: Implementacja własnego iteratora i zrozumienie jego działania.
+
+Treść:
+Zaimplementuj klasę FibonacciIterator, która będzie iteratorem generującym kolejne liczby Fibonacciego. Klasa powinna pozwalać na iterację przez n pierwszych elementów tej sekwencji.
+
+Przykład użycia:
+
+fib = FibonacciIterator(10)
+for num in fib:
+    print(num, end=" ")
+
+Oczekiwany wynik:
+0 1 1 2 3 5 8 13 21 34
