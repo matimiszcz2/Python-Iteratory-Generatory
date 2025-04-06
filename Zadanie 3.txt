@@ -1,0 +1,14 @@
+Zadanie 3: Generator liczb parzystych
+
+Cel: Implementacja generatora liczb parzystych z ograniczeniem dolnym i górnym.
+
+Treść:
+Zaimplementuj generator even_numbers(start, end), który zwróci liczby parzyste spomiędzy zakresu [start, end].
+
+Przykład użycia:
+
+for num in even_numbers(2, 10):
+    print(num)
+
+Oczekiwany wynik:
+2 4 6 8 10
