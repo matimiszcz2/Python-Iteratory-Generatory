@@ -1,0 +1,18 @@
+Zadanie 5: ChunkGenerator
+
+Cel: Implementacja generatora chunków dzielącego listę na listy o danej długości.
+
+Treść:
+Zaimplementuj generator chunkGenerator(list, chunk_size), który zwróci dane z list podzielone na podlisty o długości <= chunk_size.
+
+Przykład użycia:
+
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+chunk_size = 4
+for chunk in chunk_generator(lst, chunk_size):
+    print(chunk)
+
+Oczekiwany wynik:
+[1, 2, 3, 4]
+[5, 6, 7, 8]
+[9]

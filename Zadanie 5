@@ -1,0 +1,22 @@
+Zadanie 5: WordIterator
+
+Cel: Implementacja iteratora po słowach liczącego długość każdego słowa.
+
+Treść:
+Zaimplementuj iterator WordIterator, który z podanego zdania będzie wycinał pojedyncze słowa. Na wyjściu programu powinny być wypisywane długości pojedynczych słów.
+
+Przykład użycia:
+
+zdanie = input("Podaj zdanie: ")
+
+iterator = WordIterator(zdanie)
+
+for word in iterator:
+   ...
+
+Przykładowy oczekiwany wynik:
+2
+4
+3
+5
+3
