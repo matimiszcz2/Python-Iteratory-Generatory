@@ -9,10 +9,12 @@ from pathlib import Path
 
 def load_names_from_file(filename):
     try:
-        with open(filename, 'r', encoding='utf-8') as file:
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        full_path = os.path.join(current_dir, filename)
+        with open(full_path, 'r', encoding='utf-8') as file:
             return [line.strip() for line in file]
     except FileNotFoundError:
-        messagebox.showerror("Błąd", "Nie znaleziono pliku imiona_polskie.csv!")
+        messagebox.showerror("Błąd", "Nie znaleziono pliku!")
         return ["Jan", "Anna", "Piotr", "Maria", "Krzysztof", "Agnieszka"]
 
 
@@ -113,10 +115,10 @@ def search_action():
     input_file = input_entry.get()
     output_file = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV Files", "*.csv")])
     keyword = search_entry.get()
-    if Path(input_file).suffix != ".csv":
-        messagebox.showinfo("Błąd","Wybrano zły plik.")
-    else:
-        if input_file and output_file:
+    if input_file and output_file:
+        if Path(input_file).suffix != ".csv":
+            messagebox.showinfo("błąd", "Wybrano zły plik.")
+        else:
             search_data(input_file, output_file, keyword, gender_var.get())
             messagebox.showinfo("Sukces", "Wyniki zapisane!")
 
@@ -126,12 +128,9 @@ def sort_action():
     output_file = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV Files", "*.csv")])
     column = sort_options.index(sort_column.get())
     descending = order_var.get()
-    if Path(input_file).suffix != ".csv":
-        messagebox.showinfo("Błąd", "Wybrano zły plik.")
-    else:
-        if input_file and output_file:
-            sort_data(input_file, output_file, column, descending)
-            messagebox.showinfo("Sukces", "Dane posortowane!")
+    if input_file and output_file:
+        sort_data(input_file, output_file, column, descending)
+        messagebox.showinfo("Sukces", "Dane posortowane!")
 
 
 root = tk.Tk()
