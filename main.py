@@ -4,6 +4,7 @@ import random
 import csv
 import heapq
 import os
+from pathlib import Path
 
 
 def load_names_from_file(filename):
@@ -112,9 +113,12 @@ def search_action():
     input_file = input_entry.get()
     output_file = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV Files", "*.csv")])
     keyword = search_entry.get()
-    if input_file and output_file:
-        search_data(input_file, output_file, keyword, gender_var.get())
-        messagebox.showinfo("Sukces", "Wyniki zapisane!")
+    if Path(input_file).suffix != ".csv":
+        messagebox.showinfo("Błąd","Wybrano zły plik.")
+    else:
+        if input_file and output_file:
+            search_data(input_file, output_file, keyword, gender_var.get())
+            messagebox.showinfo("Sukces", "Wyniki zapisane!")
 
 
 def sort_action():
@@ -122,9 +126,12 @@ def sort_action():
     output_file = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV Files", "*.csv")])
     column = sort_options.index(sort_column.get())
     descending = order_var.get()
-    if input_file and output_file:
-        sort_data(input_file, output_file, column, descending)
-        messagebox.showinfo("Sukces", "Dane posortowane!")
+    if Path(input_file).suffix != ".csv":
+        messagebox.showinfo("Błąd", "Wybrano zły plik.")
+    else:
+        if input_file and output_file:
+            sort_data(input_file, output_file, column, descending)
+            messagebox.showinfo("Sukces", "Dane posortowane!")
 
 
 root = tk.Tk()
