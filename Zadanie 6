@@ -1,0 +1,20 @@
+Zadanie 6: generator grup
+Cel: Implementacja generatora group_by_char_type(s) 
+
+Treść: Zaimplementuj generator grupujący znaki z ciągu w odpowiednich kategoriach: litery, cyfry, inne. Możesz skorzystać z metod isalpha() oraz isdigit(). Generator ma sprawdzać po kolei znaki i dodawać do grupy dopóki następujące po sobie znaki są tego samego typu. Jeśli napotka znak innego typu zwraca grupę i tworzy nową.
+
+
+Przykład użycia:
+
+gen = group_by_char_type("abc123!@#def456")
+
+for group in gen:
+    print(group)
+
+Oczekiwany wynik:
+abc
+123
+!@#
+def
+456
+

@@ -1,14 +1,30 @@
-Zadanie 3: Generator liczb parzystych
+Zadanie 3: generator spirali
+Cel: Implementacja generatora spiral_generator()
 
-Cel: Implementacja generatora liczb parzystych z ograniczeniem dolnym i górnym.
+Treść: Zaimplementuj generator spirali, który zwraca numer punktu, oraz jego koordynaty. Zaczyna od punktu (1, (0,0)) następnie idzie w prawo, w górę, lewo itd.
 
-Treść:
-Zaimplementuj generator even_numbers(start, end), który zwróci liczby parzyste spomiędzy zakresu [start, end].
+17  16  15  14  13
+18   5   4   3  12
+19   6   1   2  11
+20   7   8   9  10
+21  22  23  24  25
 
 Przykład użycia:
 
-for num in even_numbers(2, 10):
-    print(num)
+gen = spiral_generator()
+for _ in range(10):
+    print(next(gen))
 
 Oczekiwany wynik:
-2 4 6 8 10
+(1, (0, 0))
+(2, (1, 0))
+(3, (1, 1))
+(4, (0, 1))
+(5, (-1, 1))
+(6, (-1, 0))
+(7, (-1, -1))
+(8, (0, -1))
+(9, (1, -1))
+(10, (2, -1))
+
+
